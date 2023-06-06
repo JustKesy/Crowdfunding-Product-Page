@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: commissioner;
+  src: url(./font/Commissioner/static/Commissioner-Regular.ttf);
+}
+body {
+  font-size: 16px;
+  font-family: commissioner;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  background-image: url("./images/image-hero-desktop.jpg");
+  background-size: cover;
+  height: 400px;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 55px 165px 0px 165px;
+}
+.links {
+  display: flex;
+  gap: 30px;
+}
+.links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.links a:hover {
+  scale: 1.1;
+  opacity: 0.8;
+}
