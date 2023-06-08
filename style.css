@@ -12,6 +12,7 @@ body {
   font-family: commissioner;
   max-width: 1440px;
   margin: 0 auto;
+  background-color: rgb(245 240 231);
 }
 header {
   width: 100%;
@@ -51,7 +52,6 @@ header {
   position: absolute;
   display: flex;
   align-items: center;
-
   top: 200px;
   left: 0;
   right: 0;
@@ -61,14 +61,14 @@ header {
   height: 150px;
   background-color: rgb(243, 248, 248);
   border-radius: 10px;
-  opacity: 0.8;
+  opacity: 0.9;
+  z-index: 1;
 }
 .mobile-links ul {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
-
   list-style: none;
   width: 100%;
 }
@@ -93,6 +93,80 @@ li > a {
   height: 20px;
 }
 
+.modal {
+  visibility: hidden;
+}
+
+main {
+  max-width: 650px;
+  min-height: 700px;
+  margin: -95px auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-section {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-section > div {
+  width: 90%;
+  margin: 0 25px 40px 25px;
+}
+h1 {
+  margin: 10px;
+}
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 15px 0 15px;
+}
+
+.main-section .title-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+}
+
+.title-btn {
+  background-color: #447d73;
+  color: white;
+  font-weight: bold;
+  width: 177px;
+
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title-bookmark {
+  background-color: #447d73;
+  display: flex;
+  color: white;
+  align-items: center;
+  border-radius: 50px;
+  height: 58px;
+}
+.title-bookmark > p {
+  margin: 15px;
+  font-weight: bold;
+}
+.title-img {
+  position: relative;
+}
+.title-logo {
+  position: absolute;
+  top: -28px;
+  left: 45%;
+}
+
 @media (max-width: 600px) {
   header {
     background-image: url("./images/image-hero-mobile.jpg");
@@ -106,5 +180,11 @@ li > a {
   }
   .hamburger-menu {
     visibility: visible;
+  }
+  .btn-par {
+    display: none;
+  }
+  .title-bookmark {
+    margin-left: 10px;
   }
 }
