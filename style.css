@@ -13,6 +13,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   background-color: rgb(245 240 231);
+  position: relative;
 }
 header {
   width: 100%;
@@ -93,10 +94,6 @@ li > a {
   height: 20px;
 }
 
-.modal {
-  visibility: hidden;
-}
-
 main {
   max-width: 650px;
   min-height: 700px;
@@ -165,6 +162,119 @@ h1 {
   position: absolute;
   top: -28px;
   left: 45%;
+}
+.modal-msg {
+  visibility: hidden;
+}
+.modal-window {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #23212183;
+}
+
+.modal {
+  max-width: 650px;
+  height: auto;
+  position: absolute;
+  top: 184px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 32px;
+  border-radius: 8px;
+}
+.close-modal {
+  display: flex;
+  justify-content: end;
+  margin-right: -7px;
+}
+
+.close-btn {
+  border: none;
+  background-color: inherit;
+}
+.close-btn:hover {
+  scale: 1.1;
+}
+.modal-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 5px 20px 5px;
+}
+.modal p,
+.set-pledge label {
+  color: #857f7f;
+}
+.pledge {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+  position: relative;
+}
+.counter {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.input {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0px 20px 0px;
+}
+.input > label {
+  font-weight: bold;
+}
+.input > p {
+  color: #449e83;
+  font-weight: 100;
+}
+
+input[type="radio"] {
+  margin-left: -30px;
+  accent-color: #449e83f6;
+}
+input[type="radio"] ~ label:hover {
+  color: #449e83;
+}
+
+.pledge-info {
+  padding-bottom: 20px;
+  margin: 0 15px 0 55px;
+}
+.set-pledge {
+  border-top: 1px solid #87848475;
+  padding: 20px 15px 20px 15px;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+.set-pledge > div {
+  display: flex;
+  gap: 10px;
+}
+.set-pledge button {
+  background-color: #447d73;
+  color: white;
+  font-weight: bold;
+  width: 90px;
+  min-height: 35px;
+  border-radius: 50px;
+}
+.set-pledge input {
+  text-align: center;
+  width: 75px;
+  border-radius: 50px;
+}
+.hidden {
+  display: none;
 }
 
 @media (max-width: 600px) {
