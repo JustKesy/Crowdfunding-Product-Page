@@ -61,10 +61,14 @@
           </p>
         </div>
         <div class="title-btns">
-          <button class="title-btn">Back this project</button
-          ><button class="title-bookmark">
+          <button class="title-btn" type="button">Back this project</button
+          ><button class="title-bookmark" type="button">
             <div class="btn-img">
-              <img src="./images/icon-bookmark.svg" alt="" />
+              <img
+                src="./images/icon-bookmark.svg"
+                alt=""
+                class="bookmark-icon"
+              />
             </div>
             <p class="btn-par">Bookmark</p>
           </button>
@@ -109,14 +113,15 @@
           </p>
         </div>
         <form>
-          <section class="pledge">
+          <section class="pledge" data-index="0">
             <div class="pledge-info">
               <div class="input">
-                <input type="radio" name="pladge" id="pladge" /><label
-                  for="pladge"
-                >
-                  Pledge with no reward</label
-                >
+                <input
+                  type="radio"
+                  name="pladge"
+                  id="pladge"
+                  data-key="0"
+                /><label for="pladge"> Pledge with no reward</label>
               </div>
               <p>
                 Choose to support us without a reward if you simply believe in
@@ -125,7 +130,7 @@
               </p>
             </div>
           </section>
-          <section class="pledge">
+          <section class="pledge" data-index="25">
             <div class="pledge-info">
               <div class="input">
                 <input
@@ -153,13 +158,13 @@
                   id="money-25"
                   name="pledge-money"
                   placeholder="$ 25"
-                /><button type="submit">Continue</button>
+                /><button class="continue" type="button">Continue</button>
               </div>
             </div>
           </section>
           <!-- Selected pledge end -->
 
-          <section class="pledge">
+          <section class="pledge" data-index="75">
             <div class="pledge-info">
               <div class="input">
                 <input
@@ -189,13 +194,13 @@
                   name="pledge-money"
                   placeholder="$ 75"
                 />
-                <button type="submit">Continue</button>
+                <button class="continue" type="button">Continue</button>
               </div>
             </div>
           </section>
           <!-- Selected pledge end -->
 
-          <section class="pledge">
+          <section class="pledge" data-index="200">
             <div class="pledge-info">
               <div class="input">
                 <input
@@ -224,7 +229,7 @@
                   name="pledge-money"
                   placeholder="$ 200"
                 />
-                <button type="submit">Continue</button>
+                <button class="continue" type="button">Continue</button>
               </div>
             </div>
           </section>
@@ -237,9 +242,16 @@
 
     <!-- Success modal start -->
     <section class="modal-msg">
-      Thanks for your support! Your pledge brings us one step closer to sharing
-      Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our
-      campaign is completed. Got it!
+      <div class="tnx-msg-img">
+        <img src="./images/icon-check.svg" alt="Green Check Sign" />
+      </div>
+      <h2>Thanks for your support!</h2>
+      <p>
+        Your pledge brings us one step closer to sharing Mastercraft Bamboo
+        Monitor Riser worldwide. You will get an email once our campaign is
+        completed.
+      </p>
+      <button class="modal-msg-btn" type="button">Got it!</button>
     </section>
 
     <!-- Success modal end -->

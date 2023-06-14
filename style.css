@@ -130,13 +130,16 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
+  height: 57px;
 }
 
-.title-btn {
+.title-btn,
+.modal-msg button {
   background-color: #447d73;
   color: white;
   font-weight: bold;
   width: 177px;
+  height: 57px;
 
   border-radius: 50px;
   display: flex;
@@ -144,15 +147,19 @@ h1 {
   justify-content: center;
 }
 .title-bookmark {
-  background-color: #447d73;
+  background-color: #c6cecc;
   display: flex;
   color: white;
   align-items: center;
   border-radius: 50px;
-  height: 58px;
+  height: 57px;
+  border: none;
+}
+.bookmark-icon {
+  filter: contrast(0.5);
 }
 .title-bookmark > p {
-  margin: 15px;
+  margin: 25px;
   font-weight: bold;
 }
 .title-img {
@@ -163,9 +170,7 @@ h1 {
   top: -28px;
   left: 45%;
 }
-.modal-msg {
-  visibility: hidden;
-}
+
 .modal-window {
   position: absolute;
   top: 0;
@@ -174,7 +179,8 @@ h1 {
   background-color: #23212183;
 }
 
-.modal {
+.modal,
+.modal-msg {
   max-width: 650px;
   height: auto;
   position: absolute;
@@ -186,6 +192,19 @@ h1 {
   background-color: white;
   padding: 32px;
   border-radius: 8px;
+}
+
+.modal-msg {
+  top: 440px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  display: none;
+}
+.modal-msg > p {
+  text-align: center;
 }
 .close-modal {
   display: flex;
@@ -207,7 +226,8 @@ h1 {
   margin: 0 5px 20px 5px;
 }
 .modal p,
-.set-pledge label {
+.set-pledge label,
+.modal-msg p {
   color: #857f7f;
 }
 .pledge {
@@ -276,7 +296,6 @@ input[type="radio"] ~ label:hover {
 .hidden {
   display: none;
 }
-
 @media (max-width: 600px) {
   header {
     background-image: url("./images/image-hero-mobile.jpg");
@@ -296,5 +315,20 @@ input[type="radio"] ~ label:hover {
   }
   .title-bookmark {
     margin-left: 10px;
+  }
+  .bookmark-icon {
+    filter: none;
+  }
+  .modal,
+  .modal-msg {
+    margin-left: 18px;
+    margin-right: 18px;
+    top: 145px;
+    padding: 20px;
+  }
+  .modal-msg {
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
