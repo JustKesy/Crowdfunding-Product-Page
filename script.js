@@ -19,9 +19,11 @@ const newPledgeInputs = Array.from(
   document.querySelectorAll("input[type=tel]")
 );
 const statusBar = document.querySelector(".progress-bar");
+
 let curentMoneCount = "50000";
 let curentBakers = "4805";
 let isOpen = false;
+
 function openLinkMenu(e) {
   isOpen = !isOpen;
   if (isOpen) {
@@ -41,12 +43,6 @@ function openClose() {
     modal.setAttribute("style", "display:block");
   }
 }
-
-hamburgerMenu.addEventListener("click", openLinkMenu);
-
-BackUpBtn.addEventListener("click", openClose);
-
-closeModalBtn.addEventListener("click", openClose);
 
 function reset() {
   setPledgeWindows.forEach((window) =>
@@ -72,14 +68,13 @@ function ifChecked(e) {
   }
 }
 
-radioBtns.forEach((btn) => btn.addEventListener("click", ifChecked));
-
 function updateCurentMoneyCount(e) {
   let x = newPledgeInputs.find(
     (input) => e.target.dataset.index == input.dataset.key
   );
   curentMoneCount = (+curentMoneCount + +x.value).toString();
 }
+
 function updateMoneyCount(x) {
   if (curentMoneCount.length <= 3) {
     moneyCount.innerHTML = "$" + curentMoneCount;
@@ -93,6 +88,7 @@ function updateMoneyCount(x) {
     moneyCount.innerHTML = "$" + "100,000";
   }
 }
+
 function updateStatusBar(x) {
   if (+curentMoneCount >= 100000) {
     statusBar.setAttribute("style", "width:100%");
@@ -101,6 +97,7 @@ function updateStatusBar(x) {
     statusBar.setAttribute("style", `width:${x}%`);
   }
 }
+
 function updateTotalBackers(x) {
   if (curentBakers.length <= 3) {
     totalBackers.innerHTML = curentBakers;
@@ -119,6 +116,7 @@ function updateTotalBackers(x) {
     curentBakers = (+curentBakers + 1).toString();
   }
 }
+
 function submitPledge(e) {
   updateCurentMoneyCount(e);
   updateMoneyCount();
@@ -131,16 +129,12 @@ function submitPledge(e) {
   modalMsg.setAttribute("style", "display:flex");
 }
 
-continueBtns.forEach((btn) => btn.addEventListener("click", submitPledge));
-
 function closeModalMsg() {
   reset();
   modalMsg.setAttribute("style", "display:none");
   openClose();
   radioBtns.forEach((btn) => (btn.checked = false));
 }
-
-modalMsgBtn.addEventListener("click", closeModalMsg);
 
 function bookMark() {
   if (bookMarkPara.innerHTML == "Bookmark") {
@@ -161,5 +155,12 @@ function start() {
   updateTotalBackers();
 }
 
+hamburgerMenu.addEventListener("click", openLinkMenu);
+BackUpBtn.addEventListener("click", openClose);
+closeModalBtn.addEventListener("click", openClose);
+radioBtns.forEach((btn) => btn.addEventListener("click", ifChecked));
+continueBtns.forEach((btn) => btn.addEventListener("click", submitPledge));
+modalMsgBtn.addEventListener("click", closeModalMsg);
 bookMarkBtn.addEventListener("click", bookMark);
+
 start();
