@@ -75,7 +75,23 @@
         </div>
       </section>
       <section class="pledge-status main-section">
-        $89,914 of $100,000 backed 5,007 total backers 56 days left
+        <div class="pledge-status-info">
+          <div class="info-cell">
+            <span class="money-count">$</span>
+            <p>of $100,000 backed</p>
+          </div>
+          <div class="info-cell">
+            <span class="number-of-backers"> 5,007</span>
+            <p>total backers</p>
+          </div>
+          <div class="info-cell">
+            <span class="day-left">56</span>
+            <p>days left</p>
+          </div>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
       </section>
       <section class="project-info main-section">
         About this project The Mastercraft Bamboo Monitor Riser is a sturdy and
@@ -158,7 +174,10 @@
                   id="money-25"
                   name="pledge-money"
                   placeholder="$ 25"
-                /><button class="continue" type="button">Continue</button>
+                  data-key="25"
+                /><button class="continue" type="button" data-index="25">
+                  Continue
+                </button>
               </div>
             </div>
           </section>
@@ -193,8 +212,11 @@
                   id="money-75"
                   name="pledge-money"
                   placeholder="$ 75"
+                  data-key="75"
                 />
-                <button class="continue" type="button">Continue</button>
+                <button class="continue" type="button" data-index="75">
+                  Continue
+                </button>
               </div>
             </div>
           </section>
@@ -228,8 +250,11 @@
                   id="money-200"
                   name="pledge-money"
                   placeholder="$ 200"
+                  data-key="200"
                 />
-                <button class="continue" type="button">Continue</button>
+                <button class="continue" type="button" data-index="200">
+                  Continue
+                </button>
               </div>
             </div>
           </section>
