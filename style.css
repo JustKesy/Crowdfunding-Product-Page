@@ -53,16 +53,15 @@ header {
   position: absolute;
   display: flex;
   align-items: center;
-  top: 200px;
+  top: 135px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
-  height: 150px;
+  width: 250px;
+  height: 170px;
   background-color: rgb(243, 248, 248);
   border-radius: 10px;
-  opacity: 0.9;
   z-index: 1;
 }
 .mobile-links ul {
@@ -84,6 +83,7 @@ header {
   border-bottom: none;
 }
 li > a {
+  flex: 1;
   color: black;
   font-weight: bold;
   text-decoration: none;
@@ -135,12 +135,11 @@ h1 {
 
 .title-btn,
 .modal-msg button {
-  background-color: #447d73;
+  background-color: #449e83;
   color: white;
   font-weight: bold;
   width: 177px;
   height: 57px;
-
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -226,6 +225,7 @@ h1 {
   margin: 0 5px 20px 5px;
 }
 p {
+  line-height: 30px;
   color: #857f7f;
 }
 .pledge {
@@ -243,13 +243,15 @@ p {
 
 .input {
   display: flex;
+  align-items: center;
   gap: 15px;
   margin: 20px 0px 20px 0px;
 }
 .input > label {
   font-weight: bold;
 }
-.input > p {
+.input > p,
+.reward > div > p {
   color: #449e83;
   font-weight: 100;
 }
@@ -269,7 +271,6 @@ input[type="radio"] ~ label:hover {
 .set-pledge {
   border-top: 1px solid #87848475;
   padding: 20px 15px 20px 15px;
-  /* display: flex; */
   justify-content: space-between;
   align-items: center;
   display: none;
@@ -279,7 +280,7 @@ input[type="radio"] ~ label:hover {
   gap: 10px;
 }
 .set-pledge button {
-  background-color: #447d73;
+  background-color: #449e83;
   color: white;
   font-weight: bold;
   width: 90px;
@@ -331,6 +332,63 @@ input[type="radio"] ~ label:hover {
   border-radius: 50px;
   height: 12px;
   background-color: #3eb4a4;
+}
+.project-info {
+  padding: 25px 0 25px 0;
+}
+
+.reward-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.reward-info > h2 {
+  font-size: 20px;
+}
+.rewards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.reward {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 1px solid #cbcbcb;
+  border-radius: 6px;
+  padding: 20px;
+}
+.reward > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.rewards-left {
+  display: flex;
+}
+.number {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  margin-right: 8px;
+}
+.reward > div > button {
+  background-color: #449e83;
+  color: white;
+  font-weight: bold;
+  width: 125px;
+
+  min-height: 35px;
+  border-radius: 50px;
+}
+button[type="button"] {
+  border: none;
+}
+button[type="button"]:hover {
+  background-color: #447d73;
+}
+.title-btns .title-bookmark:hover {
+  background-color: #c6cecc;
 }
 @media (max-width: 600px) {
   header {
